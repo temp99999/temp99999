@@ -1,7 +1,17 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
-workflows:
+
+jobs:
   node-tests:
+    docker:
+      - image: cimg/node:13.11.0
+    steps:
+      - run:
+          name: "Node tests"
+          command: npm run-script integration
+
+workflows:
+  test:
     jobs:
-      - node/test
+      - node-tests:
+          version: '12'
+          name: node-12
