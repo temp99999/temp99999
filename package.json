@@ -10,9 +10,9 @@
     "stop": "pm2 stop pm2.json",
     "remove": "pm2 delete pm2.json",
     "migrate": "echo 'run migration here'",
-    "test": "NODE_PATH=. nyc _mocha -- -R spec test/unit/*",
-    "integration": "NODE_PATH=. nyc _mocha -- -R spec test/integration/*",
-    "regression": "NODE_PATH=. nyc _mocha -- -R spec test/regression/*"
+    "test": "NODE_PATH=. _mocha -- -R spec test/unit/*",
+    "integration": "NODE_PATH=. _mocha -- -R spec test/integration/*",
+    "regression": "NODE_PATH=. _mocha -- -R spec test/regression/*"
   },
   "keywords": [],
   "author": "none",
