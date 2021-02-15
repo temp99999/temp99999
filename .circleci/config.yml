@@ -59,10 +59,8 @@ jobs:
 workflows:
   test:
     jobs:
-      - check:
-          version: '12'
-      - lint:
-          version: '12'
+      - check
+      - lint
       - node-tests:
           version: '12'
           # name: node-12
