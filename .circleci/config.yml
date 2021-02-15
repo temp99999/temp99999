@@ -17,11 +17,8 @@ jobs:
           command: npm ci
 
   lint:
-    parameters:
-      version:
-        type: string
     docker:
-      - image: circleci/node:<< parameters.version >>
+      - image: circleci/node:12
     steps:
       - checkout
       - restore_cache:
