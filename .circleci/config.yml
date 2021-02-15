@@ -48,7 +48,7 @@ jobs:
             - node-v1-
       - run:
           name: "Node tests"
-          command: npx truffle test
+          command: npm run-script integration
 #      - sonarcloud/scan
 
 #orbs:
