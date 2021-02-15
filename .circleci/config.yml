@@ -57,7 +57,7 @@ jobs:
 workflows:
   test:
     jobs:
-      # - check
+      - check
       - node-tests:
           version: '12'
           name: node-12
