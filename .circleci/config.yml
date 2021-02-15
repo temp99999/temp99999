@@ -29,7 +29,7 @@ jobs:
             - node-v1-
       - run:
           name: "Node lint"
-          command: npx eslint server.js
+          command: npx eslint app
 
   node-tests:
     parameters:
