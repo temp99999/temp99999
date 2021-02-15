@@ -29,7 +29,7 @@ jobs:
             - node-v1-
       - run:
           name: "Node lint"
-          command: ./node_modules/.bin/eslint app/config/serviceLocator.js
+          command: npx eslint server.js
 
   node-tests:
     parameters:
