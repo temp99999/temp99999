@@ -1,0 +1,37 @@
+{
+  "name": "baseapi",
+  "version": "1.0.0",
+  "description": "base api",
+  "repository": {},
+  "license": "UNLICENSED",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_PATH=. pm2 delete pm2.json && pm2 start pm2.json",
+    "stop": "pm2 stop pm2.json",
+    "remove": "pm2 delete pm2.json",
+    "migrate": "echo 'run migration here'",
+    "test": "NODE_PATH=. nyc _mocha -- -R spec test/unit/*",
+    "integration": "NODE_PATH=. nyc _mocha -- -R spec test/integration/*",
+    "regression": "NODE_PATH=. nyc _mocha -- -R spec test/regression/*"
+  },
+  "keywords": [],
+  "author": "none",
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "knex": "^0.21.17",
+    "pino": "^6.11.1",
+    "pino-http": "^5.5.0",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^8.3.0",
+    "pino-pretty": "^4.5.0",
+    "sinon": "^9.2.4",
+    "supertest": "^6.1.3"
+  }
+}
